@@ -1,0 +1,23 @@
+[package]
+name = "miraland-sbf-rust-noop"
+version = "1.8.0"
+description = "Miraland SBF noop program written in Rust"
+authors = ["Solana Labs Maintainers <maintainers@solanalabs.com>"]
+repository = "https://github.com/miraland-labs/miraland"
+license = "Apache-2.0"
+homepage = "https://solana.com/"
+documentation = "https://docs.rs/miraland-sbf-rust-noop"
+edition = "2021"
+
+[dependencies]
+num-derive = "0.3"
+num-traits = "0.2"
+miraland-program = "1.14.17-rc5"
+thiserror = "1.0"
+
+[workspace]
+members = []
+
+[lib]
+name = "miraland_sbf_rust_noop"
+crate-type = ["cdylib"]
