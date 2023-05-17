@@ -16,9 +16,9 @@
 [code-style-prettier-image]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square
 [code-style-prettier-url]: https://github.com/prettier/prettier
 
-# Solana JavaScript API
+# Solarti JavaScript API for Miraland derived from Solana JavaScript API
 
-This is the Solana Javascript API built on the Solana [JSON RPC API](https://docs.solana.com/apps/jsonrpc-api)
+This is forked/cloned and dedicated to Miraland blockchain with almost same API specifications as Solana Javascript API [JSON RPC API](https://docs.solana.com/apps/jsonrpc-api)
 
 ## Documentation and examples
 
