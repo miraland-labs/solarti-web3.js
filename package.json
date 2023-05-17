@@ -1,6 +1,6 @@
 {
   "name": "@solarti/web3.js",
-  "version": "1.73.2-rc4",
+  "version": "1.73.2",
   "description": "Solarti Javascript API derived from Solana",
   "keywords": [
     "api",
