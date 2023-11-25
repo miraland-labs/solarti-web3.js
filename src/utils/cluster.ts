@@ -1,12 +1,9 @@
 const endpoint = {
   http: {
-    // MI: replace Solana with Miraland as default
-    // devnet: 'http://api.devnet.solana.com',
-    // testnet: 'http://api.testnet.solana.com',
-    // 'mainnet-beta': 'http://api.mainnet-beta.solana.com/',
+    // Miraland as default
     devnet: 'http://api.devnet-mln.miraland.top',
     testnet: 'http://api.testnet-mln.miraland.top',
-    'mainnet-beta': 'http://api.mainnet-mln.miraland.top/',
+    mainnet: 'http://api.mainnet-mln.miraland.top/',
     // Solarti
     'devnet-slrt': 'http://api.devnet-slrt.solarti.top',
     'testnet-slrt': 'http://api.testnet-slrt.solarti.top',
@@ -25,13 +22,10 @@ const endpoint = {
     'mainnet-mln': 'http://api.mainnet-mln.miraland.top',
   },
   https: {
-    // MI: replace Solana with Miraland as default
-    // devnet: 'https://api.devnet.solana.com',
-    // testnet: 'https://api.testnet.solana.com',
-    // 'mainnet-beta': 'https://api.mainnet-beta.solana.com/',
+    // MI: Miraland as default
     devnet: 'https://api.devnet-mln.miraland.top',
     testnet: 'https://api.testnet-mln.miraland.top',
-    'mainnet-beta': 'https://api.mainnet-mln.miraland.top/',
+    mainnet: 'https://api.mainnet-mln.miraland.top/',
     // Solarti
     'devnet-slrt': 'https://api.devnet-slrt.solarti.top',
     'testnet-slrt': 'https://api.testnet-slrt.solarti.top',
@@ -54,7 +48,7 @@ const endpoint = {
 export type Cluster =
     | 'devnet'
     | 'testnet'
-    | 'mainnet-beta'
+    | 'mainnet'
     | 'devnet-slrt'
     | 'testnet-slrt'
     | 'mainnet-slrt'

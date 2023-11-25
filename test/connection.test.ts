@@ -3512,7 +3512,7 @@ describe('Connection', function () {
         if (process.env.TEST_LIVE) {
           console.warn(
             'WARNING: We ran no assertions about the genesis block because block 0 ' +
-              'could not be found. See https://github.com/solana-labs/solana/issues/23853.',
+              'could not be found. See https://github.com/miraland-labs/miraland/issues/23853.',
           );
           this.skip();
         } else {
@@ -3860,7 +3860,7 @@ describe('Connection', function () {
         if (process.env.TEST_LIVE) {
           console.warn(
             'WARNING: We ran no assertions about the genesis block because block 0 ' +
-              'could not be found. See https://github.com/solana-labs/solana/issues/23853.',
+              'could not be found. See https://github.com/miraland-labs/miraland/issues/23853.',
           );
           this.skip();
         } else {
@@ -4104,7 +4104,7 @@ describe('Connection', function () {
         if (process.env.TEST_LIVE) {
           console.warn(
             'WARNING: We ran no assertions about the genesis block because block 0 ' +
-              'could not be found. See https://github.com/solana-labs/solana/issues/23853.',
+              'could not be found. See https://github.com/miraland-labs/miraland/issues/23853.',
           );
           this.skip();
         } else {
@@ -5631,7 +5631,7 @@ describe('Connection', function () {
 
     it('https request', async () => {
       // MI: temp change to localhost
-      // const connection = new Connection('https://api.mainnet-beta.solana.com');
+      // const connection = new Connection('https://api.mainnet.miraland.top');
       const connection = new Connection('http://localhost:8899');
       const version = await connection.getVersion();
       expect(version['miraland-core']).to.be.ok;

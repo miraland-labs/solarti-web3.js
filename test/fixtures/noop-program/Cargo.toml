@@ -2,10 +2,10 @@
 name = "miraland-sbf-rust-noop"
 version = "1.8.0"
 description = "Miraland SBF noop program written in Rust"
-authors = ["Solana Labs Maintainers <maintainers@solanalabs.com>"]
+authors = ["Miraland Labs Maintainers <maintainers@miraland.top>"]
 repository = "https://github.com/miraland-labs/miraland"
 license = "Apache-2.0"
-homepage = "https://solana.com/"
+homepage = "https://miraland.top/"
 documentation = "https://docs.rs/miraland-sbf-rust-noop"
 edition = "2021"
 

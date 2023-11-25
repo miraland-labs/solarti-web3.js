@@ -1,13 +1,13 @@
 {
   "name": "@solarti/web3.js",
-  "version": "1.73.2",
-  "description": "Solarti Javascript API derived from Solana",
+  "version": "1.74.0",
+  "description": "Solarti Javascript API derived from Miraland",
   "keywords": [
     "api",
     "blockchain"
   ],
   "license": "MIT",
-  "author": "Solana Labs Maintainers <maintainers@solanalabs.com>",
+  "author": "Miraland Labs Maintainers <maintainers@miraland.top>",
   "contributors": [
     {
       "name": "Miraland Crafters",

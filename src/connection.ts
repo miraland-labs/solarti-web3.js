@@ -737,7 +737,7 @@ export type VoteAccountStatus = {
 
 /**
  * Network Inflation
- * (see https://docs.solana.com/implemented-proposals/ed_overview)
+ * (see https://docs.miraland.top/implemented-proposals/ed_overview)
  */
 export type InflationGovernor = {
   foundation: number;
@@ -840,7 +840,7 @@ const GetEpochScheduleResult = pick({
 
 /**
  * Leader schedule
- * (see https://docs.solana.com/terminology#leader-schedule)
+ * (see https://docs.miraland.top/terminology#leader-schedule)
  */
 export type LeaderSchedule = {
   [address: string]: number[];
@@ -968,7 +968,7 @@ export type TokenBalance = {
 /**
  * Metadata for a parsed confirmed transaction on the ledger
  *
- * @deprecated Deprecated since Solana v1.8.0. Please use {@link ParsedTransactionMeta} instead.
+ * @deprecated Deprecated since Miraland v1.8.0. Please use {@link ParsedTransactionMeta} instead.
  */
 export type ParsedConfirmedTransactionMeta = ParsedTransactionMeta;
 
@@ -1091,7 +1091,7 @@ type MessageResponse = {
 /**
  * A confirmed transaction on the ledger
  *
- * @deprecated Deprecated since Solana v1.8.0.
+ * @deprecated Deprecated since Miraland v1.8.0.
  */
 export type ConfirmedTransaction = {
   /** The slot during which the transaction was processed */
@@ -1181,7 +1181,7 @@ export type ParsedTransaction = {
 /**
  * A parsed and confirmed transaction on the ledger
  *
- * @deprecated Deprecated since Solana v1.8.0. Please use {@link ParsedTransactionWithMeta} instead.
+ * @deprecated Deprecated since Miraland v1.8.0. Please use {@link ParsedTransactionWithMeta} instead.
  */
 export type ParsedConfirmedTransaction = ParsedTransactionWithMeta;
 
@@ -1388,7 +1388,7 @@ export type VersionedNoneModeBlockResponse = Omit<
 /**
  * A confirmed block on the ledger
  *
- * @deprecated Deprecated since Solana v1.8.0.
+ * @deprecated Deprecated since Miraland v1.8.0.
  */
 export type ConfirmedBlock = {
   /** Blockhash of this block */
@@ -1507,8 +1507,8 @@ function createRpcClient(
     if (httpAgent == null) {
       if (process.env.NODE_ENV !== 'test') {
         const agentOptions = {
-          // One second fewer than the Solana RPC's keepalive timeout.
-          // Read more: https://github.com/solana-labs/solana/issues/27859#issuecomment-1340097889
+          // One second fewer than the Miraland RPC's keepalive timeout.
+          // Read more: https://github.com/miraland-labs/miraland/issues/27859#issuecomment-1340097889
           freeSocketTimeout: 19000,
           keepAlive: true,
           maxSockets: 25,
@@ -2437,7 +2437,7 @@ const GetParsedNoneModeBlockRpcResult = jsonRpcResult(
 /**
  * Expected JSON RPC response for the "getConfirmedBlock" message
  *
- * @deprecated Deprecated since Solana v1.8.0. Please use {@link GetBlockRpcResult} instead.
+ * @deprecated Deprecated since Miraland v1.8.0. Please use {@link GetBlockRpcResult} instead.
  */
 const GetConfirmedBlockRpcResult = jsonRpcResult(
   nullable(
@@ -2505,7 +2505,7 @@ const GetParsedTransactionRpcResult = jsonRpcResult(
 /**
  * Expected JSON RPC response for the "getRecentBlockhash" message
  *
- * @deprecated Deprecated since Solana v1.8.0. Please use {@link GetLatestBlockhashRpcResult} instead.
+ * @deprecated Deprecated since Miraland v1.8.0. Please use {@link GetLatestBlockhashRpcResult} instead.
  */
 const GetRecentBlockhashAndContextRpcResult = jsonRpcResultAndContext(
   pick({
@@ -3046,7 +3046,7 @@ export class Connection {
    * clear out the subscription locally without telling the server).
    *
    * NOTE: There is a proposal to eliminate this special case, here:
-   * https://github.com/solana-labs/solana/issues/18892
+   * https://github.com/miraland-labs/miraland/issues/18892
    */
   /** @internal */ private _subscriptionsAutoDisposedByRpc: Set<ServerSubscriptionId> =
     new Set();
@@ -4382,7 +4382,7 @@ export class Connection {
    * Fetch a recent blockhash from the cluster, return with context
    * @return {Promise<RpcResponseAndContext<{blockhash: Blockhash, feeCalculator: FeeCalculator}>>}
    *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getLatestBlockhash} instead.
+   * @deprecated Deprecated since Miraland v1.8.0. Please use {@link getLatestBlockhash} instead.
    */
   async getRecentBlockhashAndContext(
     commitment?: Commitment,
@@ -4423,7 +4423,7 @@ export class Connection {
   /**
    * Fetch the fee calculator for a recent blockhash from the cluster, return with context
    *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getFeeForMessage} instead.
+   * @deprecated Deprecated since Miraland v1.8.0. Please use {@link getFeeForMessage} instead.
    */
   async getFeeCalculatorForBlockhash(
     blockhash: Blockhash,
@@ -4471,7 +4471,7 @@ export class Connection {
    * Fetch a recent blockhash from the cluster
    * @return {Promise<{blockhash: Blockhash, feeCalculator: FeeCalculator}>}
    *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getLatestBlockhash} instead.
+   * @deprecated Deprecated since Miraland v1.8.0. Please use {@link getLatestBlockhash} instead.
    */
   async getRecentBlockhash(
     commitment?: Commitment,
@@ -5080,7 +5080,7 @@ export class Connection {
   /**
    * Fetch a list of Signatures from the cluster for a confirmed block, excluding rewards
    *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getBlockSignatures} instead.
+   * @deprecated Deprecated since Miraland v1.8.0. Please use {@link getBlockSignatures} instead.
    */
   async getConfirmedBlockSignatures(
     slot: number,
@@ -5110,7 +5110,7 @@ export class Connection {
   /**
    * Fetch a transaction details for a confirmed transaction
    *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getTransaction} instead.
+   * @deprecated Deprecated since Miraland v1.8.0. Please use {@link getTransaction} instead.
    */
   async getConfirmedTransaction(
     signature: TransactionSignature,
@@ -5137,7 +5137,7 @@ export class Connection {
   /**
    * Fetch parsed transaction details for a confirmed transaction
    *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getParsedTransaction} instead.
+   * @deprecated Deprecated since Miraland v1.8.0. Please use {@link getParsedTransaction} instead.
    */
   async getParsedConfirmedTransaction(
     signature: TransactionSignature,
@@ -5162,7 +5162,7 @@ export class Connection {
   /**
    * Fetch parsed transaction details for a batch of confirmed transactions
    *
-   * @deprecated Deprecated since Solana v1.8.0. Please use {@link getParsedTransactions} instead.
+   * @deprecated Deprecated since Miraland v1.8.0. Please use {@link getParsedTransactions} instead.
    */
   async getParsedConfirmedTransactions(
     signatures: TransactionSignature[],
@@ -5401,7 +5401,7 @@ export class Connection {
    * import { Connection, PublicKey, LAMPORTS_PER_MLN } from "@solarti/web3.js";
    *
    * (async () => {
-   *   const connection = new Connection("https://api.testnet.solana.com", "confirmed");
+   *   const connection = new Connection("https://api.testnet.miraland.top", "confirmed");
    *   const myAddress = new PublicKey("2nr1bHFT86W9tGnyvmYW4vcHKsQB3sVQfnddasz4kExM");
    *   const signature = await connection.requestAirdrop(myAddress, LAMPORTS_PER_MLN);
    *   await connection.confirmTransaction(signature);
@@ -6034,7 +6034,7 @@ export class Connection {
                    * tear down the subscription here.
                    *
                    * NOTE: There is a proposal to eliminate this special case, here:
-                   * https://github.com/solana-labs/solana/issues/18892
+                   * https://github.com/miraland-labs/miraland/issues/18892
                    */
                   this._subscriptionsAutoDisposedByRpc.delete(
                     serverSubscriptionId,
@@ -6511,7 +6511,7 @@ export class Connection {
        * clear out the subscription locally without telling the server).
        *
        * NOTE: There is a proposal to eliminate this special case, here:
-       * https://github.com/solana-labs/solana/issues/18892
+       * https://github.com/miraland-labs/miraland/issues/18892
        */
       this._subscriptionsAutoDisposedByRpc.add(subscription);
     }

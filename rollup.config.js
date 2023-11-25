@@ -129,13 +129,13 @@ function generateConfig(configType, format) {
             {
               file: 'lib/index.iife.js',
               format: 'iife',
-              name: 'solanaWeb3',
+              name: 'solartiWeb3',
               sourcemap: true,
             },
             {
               file: 'lib/index.iife.min.js',
               format: 'iife',
-              name: 'solanaWeb3',
+              name: 'solartiWeb3',
               sourcemap: true,
               plugins: [terser({mangle: false, compress: false})],
             },

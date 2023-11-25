@@ -182,7 +182,7 @@ describe('PublicKey', function () {
       ),
     ).to.be.rejectedWith('Max seed length exceeded');
 
-    // https://github.com/solana-labs/solana/issues/11950
+    // https://github.com/miraland-labs/miraland/issues/11950
     {
       let seeds = [
         new PublicKey(
