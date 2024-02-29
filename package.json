@@ -1,6 +1,6 @@
 {
   "name": "@solarti/web3.js",
-  "version": "1.74.0",
+  "version": "1.74.1",
   "description": "Solarti Javascript API derived from Miraland",
   "keywords": [
     "api",
@@ -18,7 +18,7 @@
   "homepage": "https://miraland.top/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/miraland-labs/solarti-web3.js.git"
+    "url": "https://github.com/miraland-labs/solarti-web3.js"
   },
   "bugs": {
     "url": "http://github.com/miraland-labs/solarti-web3.js.git/issues"
